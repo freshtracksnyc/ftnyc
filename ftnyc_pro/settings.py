@@ -25,7 +25,7 @@ SECRET_KEY = '22hav^yx0=(u%nij&xkz7rker1a^uhw@8xn%eh^1vh8mi!gewa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['157.230.3.239', 'freshtrack.nyc', 'www.freshtracks.nyc', 'localhost']
+ALLOWED_HOSTS = ['157.230.3.239', 'freshtracks.nyc', 'www.freshtracks.nyc', 'localhost']
 
 
 # Application definition
