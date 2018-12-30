@@ -76,7 +76,7 @@
           zoom: 9.75
       });
 
-      var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=GOOD';
+      var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_b=8';
       map.on('load', function () {
           window.setInterval(function() {
               map.getSource('good').setData(url);

@@ -1,1 +1,175 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Fresh Tracks</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+
+      body {
+        color: #404040;
+        font: 100 24px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+        margin: 0% 0% 12.5% 12.5%;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      nav {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav a {
+          font-size: 20px;
+          display: inline-block;
+          padding: 0px 25px;
+          text-decoration: none;
+          text-transformation: uppercase;
+      }
+
+      .map {
+        position: absolute;
+        height: 75%;
+        width: 75%;
+        top: 45px;
+        bottom: 0;
+      }
+
+
+
+
+
+      a:visited {
+        color: black;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <nav>
+        <a href="#">FRESH TRACKS</a>
+        <a href="#">SKATE SHOPS</a>
+        <a href="#">CONTACT</a>
+      </nav>
+      <div id="map" class="map">
+      </div>
+    </main>
+  </body>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1hZHJpY2siLCJhIjoiY2ptOW83N2llMDBybzNwbTVtbnJydWpqNCJ9.1v3I6nmQV0uRg_sn1UW4kw';
+
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/light-v9',
+          center: [-74.0060, 40.7128],
+          zoom: 9.75
+      });
+
+      var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_b=8';
+      map.on('load', function () {
+          window.setInterval(function() {
+              map.getSource('good').setData(url);
+          }, 2000);
+          map.addSource('good', { type: 'geojson', data: url });
+          map.addLayer({
+              "id": "good",
+              "type": "line",
+              "source": "good",
+              "layout": {
+                "line-join": "bevel",
+                "line-cap": "round"
+              },
+              "paint": {
+                "line-color": "#2ECC71",
+                "line-width": 5,
+                "line-opacity": .75,
+              }
+          });
+      });
+
+      var url1 = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=FAIR';
+      map.on('load', function () {
+          window.setInterval(function() {
+              map.getSource('fair').setData(url1);
+          }, 2000);
+          map.addSource('fair', { type: 'geojson', data: url1 });
+          map.addLayer({
+              "id": "fair",
+              "type": "line",
+              "source": "fair",
+              "layout": {
+                "line-join": "bevel",
+                "line-cap": "round"
+              },
+              "paint": {
+                "line-color": "#FFEC00",
+                "line-width": 5,
+                "line-opacity": .75,
+              }
+          });
+      });
+
+      var url2 = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=POOR';
+      map.on('load', function () {
+          window.setInterval(function() {
+              map.getSource('poor').setData(url2);
+          }, 2000);
+          map.addSource('poor', { type: 'geojson', data: url2 });
+          map.addLayer({
+              "id": "poor",
+              "type": "line",
+              "source": "poor",
+              "layout": {
+                "line-join": "bevel",
+                "line-cap": "round"
+              },
+              "paint": {
+                "line-color": "#FF0000",
+                "line-width": 5,
+                "line-opacity": .75,
+              }
+          });
+      });
+
+      var url3 = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=NR';
+      map.on('load', function () {
+          window.setInterval(function() {
+              map.getSource('nr').setData(url3);
+          }, 2000);
+          map.addSource('nr', { type: 'geojson', data: url3 });
+          map.addLayer({
+              "id": "nr",
+              "type": "line",
+              "source": "nr",
+              "layout": {
+                "line-join": "bevel",
+                "line-cap": "round"
+              },
+              "paint": {
+                "line-color": "#A5A5A5",
+                "line-width": 5,
+                "line-opacity": .75,
+              }
+          });
+      });
+
+      map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        trackUserLocation: true
+      }));
+
+  </script>
+</html>
