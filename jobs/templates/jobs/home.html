@@ -70,11 +70,6 @@
     </header>
 
     <main>
-      <a href="{% url 'home' %}"><img src="{% static 'FreshTracks.png' %}" height="10% vh"></a>
-
-      <p></p>
-      <p></p>
-      <p></p>
       <div id="map" class="map">
       </div>
     </main>
@@ -112,12 +107,6 @@
               }
           });
       });
-
-      map.addControl(new mapboxgl.GeolocateControl({
-        positionOptions: {
-          enableHighAccuracy: true
-        },
-        trackUserLocation: true
       }));
 
   </script>
