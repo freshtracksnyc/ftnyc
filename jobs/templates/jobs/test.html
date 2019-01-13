@@ -76,7 +76,7 @@
           zoom: 9.75
       });
 
-      var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_b=8';
+      var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=GOOD';
       map.on('load', function () {
           window.setInterval(function() {
               map.getSource('good').setData(url);
@@ -92,72 +92,6 @@
               },
               "paint": {
                 "line-color": "#2ECC71",
-                "line-width": 5,
-                "line-opacity": .75,
-              }
-          });
-      });
-
-      var url1 = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=FAIR';
-      map.on('load', function () {
-          window.setInterval(function() {
-              map.getSource('fair').setData(url1);
-          }, 2000);
-          map.addSource('fair', { type: 'geojson', data: url1 });
-          map.addLayer({
-              "id": "fair",
-              "type": "line",
-              "source": "fair",
-              "layout": {
-                "line-join": "bevel",
-                "line-cap": "round"
-              },
-              "paint": {
-                "line-color": "#FFEC00",
-                "line-width": 5,
-                "line-opacity": .75,
-              }
-          });
-      });
-
-      var url2 = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=POOR';
-      map.on('load', function () {
-          window.setInterval(function() {
-              map.getSource('poor').setData(url2);
-          }, 2000);
-          map.addSource('poor', { type: 'geojson', data: url2 });
-          map.addLayer({
-              "id": "poor",
-              "type": "line",
-              "source": "poor",
-              "layout": {
-                "line-join": "bevel",
-                "line-cap": "round"
-              },
-              "paint": {
-                "line-color": "#FF0000",
-                "line-width": 5,
-                "line-opacity": .75,
-              }
-          });
-      });
-
-      var url3 = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_word=NR';
-      map.on('load', function () {
-          window.setInterval(function() {
-              map.getSource('nr').setData(url3);
-          }, 2000);
-          map.addSource('nr', { type: 'geojson', data: url3 });
-          map.addLayer({
-              "id": "nr",
-              "type": "line",
-              "source": "nr",
-              "layout": {
-                "line-join": "bevel",
-                "line-cap": "round"
-              },
-              "paint": {
-                "line-color": "#A5A5A5",
                 "line-width": 5,
                 "line-opacity": .75,
               }
