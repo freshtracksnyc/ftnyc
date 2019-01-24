@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Fresh Tracks</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    {% load static %}
+
+    <style>
+
+      body {
+        color: #404040;
+        font: 100 24px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+        margin: 0% 0% 12.5% 12.5%;
+        padding-right: 150px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header {
+        border-bottom: 1px solid #000000;
+        overflow: hidden;
+        width: 100%;
+        text-align: right;
+        padding-top: 25px;
+      }
+
+      header h1 {
+          font-size: 50px;
+          font-weight: 100;
+          line-height: 10px;
+          text-align: right;
+      }
+
+      header h2 {
+          font-size: 18px;
+          font-weight: 100;
+          line-height: 10px;
+      }
+
+      main {
+        padding-top: 50px;
+      }
+
+      .map {
+        padding-top: 60px;
+        position: absolute;
+        height: 75%;
+        width: 75%;
+        top: 45px;
+        bottom: 0;
+      }
+
+
+
+
+
+      a:visited {
+        color: black;
+      }
+
+      footer {
+        margin-top: 5px;
+        border-top: 1px solid #000000;
+        overflow: hidden;
+        width: 100%;
+        text-align: right;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+        <a href="{% url 'home' %}"><img src="{% static 'FreshTracks.png' %}" height="55"></a>
+    </header>
+
+    <main>
+      <div>
+        <h1>Welcome to FreshTracks NYC</h1>
+        <p>Fresh Tracks is all about giving skateboarders and bikers the inside scoop on the best places to ride in the city.</p>
+      </div>
+    </main>
+
+    <footer>
+      <a href="{% url 'about' %}">About</a>
+    </footer>
+
+  </body>
