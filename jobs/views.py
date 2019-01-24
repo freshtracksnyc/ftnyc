@@ -6,3 +6,6 @@ def home(request):
 
 def test(request):
     return render(request, 'jobs/test.html')
+
+def about(request):
+    return render(request, 'jobs/about.html')
