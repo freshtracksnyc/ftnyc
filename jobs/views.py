@@ -8,4 +8,4 @@ def about(request):
     return render(request, 'jobs/about.html')
 
 def map(request):
-    return render(request, 'jobs/maps.html')
+    return render(request, 'jobs/map.html')
