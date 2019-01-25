@@ -51,6 +51,12 @@ map.on('load', function () {
 map.addControl(new MapboxDirections({
     accessToken: mapboxgl.accessToken
 }), 'top-left');
+
+map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+}));
 </script>
 
 </body>
