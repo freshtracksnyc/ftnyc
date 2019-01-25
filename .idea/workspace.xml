@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90bf82ca-f63e-4761-a2b7-938587bc02b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/test.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,14 +42,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="3030" />
+          <entry key="html" value="3071" />
           <entry key="js" value="72" />
           <entry key="py" value="647" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3030" />
+          <entry key="HTML" value="3071" />
           <entry key="JavaScript" value="72" />
           <entry key="Python" value="647" />
         </counts>
@@ -74,15 +75,6 @@
               <folding>
                 <element signature="e#225#234#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -124,8 +116,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1294">
+            <state relative-caret-position="400">
               <caret line="91" selection-start-line="91" selection-end-line="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="56" column="7" lean-forward="true" selection-end-line="56" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -133,8 +134,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="109" column="82" selection-start-line="109" selection-start-column="82" selection-end-line="109" selection-end-column="82" />
+            <state relative-caret-position="403">
+              <caret line="56" column="7" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -142,7 +143,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="35">
               <caret line="21" selection-start-line="21" selection-end-line="39" selection-end-column="7" />
             </state>
           </provider>
@@ -167,12 +168,12 @@
         <option value="$PROJECT_DIR$/jobs/templates/jobs/test.js" />
         <option value="$USER_HOME$/Desktop/home.html" />
         <option value="$PROJECT_DIR$/ftnyc_pro/settings.py" />
-        <option value="$PROJECT_DIR$/jobs/templates/jobs/test.html" />
         <option value="$PROJECT_DIR$/jobs/templates/jobs/about.html" />
         <option value="$PROJECT_DIR$/ftnyc_pro/urls.py" />
         <option value="$PROJECT_DIR$/jobs/views.py" />
-        <option value="$PROJECT_DIR$/jobs/templates/jobs/map.html" />
         <option value="$PROJECT_DIR$/jobs/templates/jobs/home.html" />
+        <option value="$PROJECT_DIR$/jobs/templates/jobs/test.html" />
+        <option value="$PROJECT_DIR$/jobs/templates/jobs/map.html" />
       </list>
     </option>
   </component>
@@ -332,20 +333,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="39" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ftnyc_pro/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -374,17 +361,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="21" selection-start-line="21" selection-end-line="39" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1294">
+        <state relative-caret-position="400">
           <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="56" column="7" lean-forward="true" selection-end-line="56" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="109" column="82" selection-start-line="109" selection-start-column="82" selection-end-line="109" selection-end-column="82" />
+        <state relative-caret-position="403">
+          <caret line="56" column="7" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
         </state>
       </provider>
     </entry>

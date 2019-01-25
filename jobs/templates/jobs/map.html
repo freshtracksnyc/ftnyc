@@ -1,114 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset='utf-8' />
     <title>Fresh Tracks</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
-    {% load static %}
-
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
     <style>
-
-      body {
-        color: #404040;
-        font: 100 24px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
-        margin: 0% 0% 12.5% 12.5%;
-        padding-right: 150px;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      header {
-        border-bottom: 1px solid #000000;
-        overflow: hidden;
-        width: 100%;
-        text-align: right;
-        padding-top: 25px;
-      }
-
-      header h1 {
-          font-size: 50px;
-          font-weight: 100;
-          line-height: 10px;
-          text-align: right;
-      }
-
-      header h2 {
-          font-size: 18px;
-          font-weight: 100;
-          line-height: 10px;
-      }
-
-      main {
-        padding-top: 50px;
-      }
-
-      .map {
-        padding-top: 60px;
-        position: absolute;
-        height: 75%;
-        width: 75%;
-        top: 45px;
-        bottom: 0;
-      }
-
-
-
-
-
-      a:visited {
-        color: black;
-      }
-
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
-  </head>
+</head>
+<body>
 
-  <body>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />
+<div id='map'></div>
 
-    <header>
-        <a href="{% url 'home' %}"><img src="{% static 'FreshTracks.png' %}" height="55"></a>
-    </header>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW1hZHJpY2siLCJhIjoiY2ptOW83N2llMDBybzNwbTVtbnJydWpqNCJ9.1v3I6nmQV0uRg_sn1UW4kw';
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/light-v9',
+  center: [-74.0060, 40.7128],
+  zoom: 9.75
+});
 
-    <main>
-      <div id="map" class="map">
-      </div>
-    </main>
+var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_b=8';
+map.on('load', function () {
+  window.setInterval(function() {
+      map.getSource('good').setData(url);
+  }, 2000);
+  map.addSource('good', { type: 'geojson', data: url });
+  map.addLayer({
+      "id": "good",
+      "type": "line",
+      "source": "good",
+      "layout": {
+        "line-join": "bevel",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#2ECC71",
+        "line-width": 5,
+        "line-opacity": .75,
+      }
+  });
+});
 
-  </body>
+map.addControl(new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+}), 'top-left');
+</script>
 
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1hZHJpY2siLCJhIjoiY2ptOW83N2llMDBybzNwbTVtbnJydWpqNCJ9.1v3I6nmQV0uRg_sn1UW4kw';
-
-      var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/mapbox/light-v9',
-          center: [-74.0060, 40.7128],
-          zoom: 9.75
-      });
-
-      var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_b=8';
-      map.on('load', function () {
-          window.setInterval(function() {
-              map.getSource('good').setData(url);
-          }, 2000);
-          map.addSource('good', { type: 'geojson', data: url });
-          map.addLayer({
-              "id": "good",
-              "type": "line",
-              "source": "good",
-              "layout": {
-                "line-join": "bevel",
-                "line-cap": "round"
-              },
-              "paint": {
-                "line-color": "#2ECC71",
-                "line-width": 5,
-                "line-opacity": .75,
-              }
-          });
-          map.addControl(new MapboxDirections({ accessToken: mapboxgl.accessToken }), 'top-left');
-      });
-
-  </script>
+</body>
 </html>
