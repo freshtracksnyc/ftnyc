@@ -40,14 +40,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2403" />
+          <entry key="html" value="2945" />
           <entry key="js" value="72" />
           <entry key="py" value="647" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2403" />
+          <entry key="HTML" value="2945" />
           <entry key="JavaScript" value="72" />
           <entry key="Python" value="647" />
         </counts>
@@ -123,8 +123,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="82" column="86" lean-forward="true" selection-start-line="82" selection-start-column="86" selection-end-line="82" selection-end-column="86" />
+            <state relative-caret-position="364">
+              <caret line="78" column="272" selection-start-line="78" selection-start-column="272" selection-end-line="78" selection-end-column="272" />
             </state>
           </provider>
         </entry>
@@ -382,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="82" column="86" lean-forward="true" selection-start-line="82" selection-start-column="86" selection-end-line="82" selection-end-column="86" />
+        <state relative-caret-position="364">
+          <caret line="78" column="272" selection-start-line="78" selection-start-column="272" selection-end-line="78" selection-end-column="272" />
         </state>
       </provider>
     </entry>
