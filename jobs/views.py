@@ -4,8 +4,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'jobs/home.html')
 
-def test(request):
-    return render(request, 'jobs/test.html')
-
 def about(request):
     return render(request, 'jobs/about.html')
+
+def map(request):
+    return render(request, 'jobs/maps.html')
