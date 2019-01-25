@@ -54,7 +54,7 @@
         bottom: 0;
       }
 
-      h1 {
+      h1, h2 {
         font-weight: 100;
       }
 
@@ -80,7 +80,7 @@
         <p>Below, you will find an interactive map that shows the best quality streets in the entire city. You can also click for a resurfacing schedule of the streets in your borough.</p>
         <p>Enjoy the shred!</p>
         <a href="{% url 'map' %}">Find the best streets in NYC</a>
-        <h1>Find the Freshest Roads in NYC</h1>
+        <h2>Find the Freshest Roads in NYC</h2>
         <a href="http://www.nyc.gov/html/dot/downloads/pdf/bxresurf.pdf">BRONX</a>
         <a href="http://www.nyc.gov/html/dot/downloads/pdf/bkresurf.pdf">BROOKLYN</a>
         <a href="http://www.nyc.gov/html/dot/downloads/pdf/mnresurf.pdf">MANHATTAN</a>
@@ -90,37 +90,4 @@
 
   </body>
 
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1hZHJpY2siLCJhIjoiY2ptOW83N2llMDBybzNwbTVtbnJydWpqNCJ9.1v3I6nmQV0uRg_sn1UW4kw';
-
-      var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/mapbox/light-v9',
-          center: [-74.0060, 40.7128],
-          zoom: 9.75
-      });
-
-      var url = 'https://data.cityofnewyork.us/resource/77fd-dby5.geojson?rating_b=8';
-      map.on('load', function () {
-          window.setInterval(function() {
-              map.getSource('good').setData(url);
-          }, 2000);
-          map.addSource('good', { type: 'geojson', data: url });
-          map.addLayer({
-              "id": "good",
-              "type": "line",
-              "source": "good",
-              "layout": {
-                "line-join": "bevel",
-                "line-cap": "round"
-              },
-              "paint": {
-                "line-color": "#2ECC71",
-                "line-width": 5,
-                "line-opacity": .75,
-              }
-          });
-      });
-
-  </script>
 </html>
