@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90bf82ca-f63e-4761-a2b7-938587bc02b6" name="Default Changelist" comment="" />
+    <list default="true" id="90bf82ca-f63e-4761-a2b7-938587bc02b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/home.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +40,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2182" />
+          <entry key="html" value="2212" />
           <entry key="js" value="72" />
           <entry key="py" value="647" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2182" />
+          <entry key="HTML" value="2212" />
           <entry key="JavaScript" value="72" />
           <entry key="Python" value="647" />
         </counts>
@@ -105,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jobs/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <marker date="1548379680000" expanded="true" signature="81:86" ph="..." />
                 <marker date="1548379680000" expanded="true" signature="147:152" ph="..." />
@@ -118,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="240">
+              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -168,14 +170,14 @@
         <option value="$PROJECT_DIR$/jobs/templates/jobs/about.html" />
         <option value="$PROJECT_DIR$/ftnyc_pro/urls.py" />
         <option value="$PROJECT_DIR$/jobs/templates/jobs/map.html" />
-        <option value="$PROJECT_DIR$/jobs/templates/jobs/home.html" />
         <option value="$PROJECT_DIR$/jobs/views.py" />
+        <option value="$PROJECT_DIR$/jobs/templates/jobs/home.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="625" />
-    <option name="y" value="55" />
+    <option name="x" value="762" />
+    <option name="y" value="211" />
     <option name="width" value="1430" />
     <option name="height" value="937" />
   </component>
@@ -278,7 +280,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="625" y="55" width="1430" height="937" extended-state="0" />
+    <frame x="762" y="211" width="1430" height="937" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23136976" />
@@ -350,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ftnyc_pro/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -377,11 +372,18 @@
     <entry file="file://$PROJECT_DIR$/jobs/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <marker date="1548379680000" expanded="true" signature="81:86" ph="..." />
             <marker date="1548379680000" expanded="true" signature="147:152" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
         </state>
       </provider>
     </entry>
